@@ -17,3 +17,10 @@ For dispatch pay need json payload such as
 
 
 Filter patern cheat sheet
+
+
+For make Encrypting Environment Variable.
+	-> Go to Setting
+	-> Secrets & Add new secret
+	-> Name will be environment variable name
+	-> Value will be encrypting value
