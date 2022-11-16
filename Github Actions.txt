@@ -6,3 +6,11 @@ From Setting:
 	ACTIONS_STEP_DEBUG true
 
 For Repository Dispatch Event (Such as: POSTMAN post request) need to create github authorize token from github developer setting. (Personal Access Token)
+
+For dispatch pay need json payload such as
+{
+	"event_type": "on-demand-test",
+	"client_payload": {
+		"env": "production"
+	}
+}
