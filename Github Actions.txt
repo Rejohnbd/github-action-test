@@ -24,3 +24,5 @@ For make Encrypting Environment Variable.
 	-> Secrets & Add new secret
 	-> Name will be environment variable name
 	-> Value will be encrypting value
+
+
