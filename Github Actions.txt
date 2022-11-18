@@ -26,3 +26,28 @@ For make Encrypting Environment Variable.
 	-> Value will be encrypting value
 
 
+CLI Tool GPG 
+after install gpp need impliment command for json encypt
+such as: gpg --symmentric --cipher-algo AES265 secret.json
+Then need inter password
+Then a gpg file created.
+then pull that gpg to github.
+
+{
+    "api_key": "Md. Atikur Raham Rejohn",
+    "api_user": "rejohnbd"
+}
+
+For GPG impliment at workflow
+	decrypt:
+		runs-on: ubuntu-latest
+		steps:
+			- users: actions/checkout@v1
+			- name: Decrypt file
+				run: gpg --quite --batch  --yes --decrypt --passphrase="PASSPHRASE" --output $HOME/secret.json  secret.json.gpg  or 123(secret key from github setting)
+				env: 
+					PASSPHRASE: ${{ secrets.PASSPHRASE }}
+			- name: Print our file contect
+			  run: cat $HOME/secret.json
+
+		
